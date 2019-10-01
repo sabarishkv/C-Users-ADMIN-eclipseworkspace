@@ -1,0 +1,9 @@
+package Testngsamples;
+
+import org.testng.annotations.Test;
+
+public class getcommands {
+  @Test
+  public void f() {
+  }
+}

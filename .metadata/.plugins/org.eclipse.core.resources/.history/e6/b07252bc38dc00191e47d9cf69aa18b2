@@ -1,0 +1,21 @@
+package Testngsamples;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class getcommands {
+  @Test
+  public void f() {
+	  System.setProperty("webdriver.chrome.driver", "F:\\software\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver(); 
+		driver.get("http://google.com/");
+		String title=driver.getTitle();
+		System.out.println(title);
+		String url=driver.getCurrentUrl();
+		System.out.println(url);
+		String ps=driver.getPageSource();
+		System.out.println(ps);
+				
+  }
+}

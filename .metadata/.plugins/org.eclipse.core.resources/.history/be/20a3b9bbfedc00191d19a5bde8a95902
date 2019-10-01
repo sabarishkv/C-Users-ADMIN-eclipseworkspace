@@ -1,0 +1,32 @@
+package Testngsamples;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GmailSend {
+	
+	public static void main(String[] args) throws Exception {
+	
+		System.setProperty("webdriver.chrome.driver", "F:\\software\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://mail.google.com");
+		driver.findElement( By.id("identifierId")).sendKeys("sabarish547");
+		driver.findElement(By.xpath("//span[text()='Next']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.name("password")).sendKeys("sabi290394");
+		driver.findElement(By.xpath("//span[text()='Next']")).click();
+		Thread.sleep(3000);
+
+		driver.findElement(By.xpath("//div[text()='Compose']")).click();
+		driver.findElement(By.name("to")).sendKeys("sabarishk98@gmail.com");
+		driver.findElement(By.name("subjectbox")).sendKeys("sabi290394");
+		driver.findElement(By.xpath("//span[@aria-label,'Message body')]")).sendKeys("send code");
+		driver.findElement(By.xpath("//div[text()='send']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@id=\"gb\"]/div[2]/div[3]/div/div[2]/div/a/span")).click();
+		Thread.sleep(3000);
+		driver.findElement( By.id("gb_71")).click();
+		}
+
+}

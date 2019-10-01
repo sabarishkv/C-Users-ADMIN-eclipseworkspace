@@ -1,0 +1,25 @@
+package Testngsamples;
+
+public class Jquery {
+
+	public static void main(String[] args) {
+		
+		
+		
+		WebDriver driver;
+
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
+		//Automate drag-drop elements
+		driver.switchTo().frame(0);
+		WebElement e1=driver.findElement(By.id("draggable"));
+		WebElement e2=driver.findElement(By.id("droppable"));
+		Actions action=new Actions(driver);
+		//action.dragAndDrop(e1,e2).build().perform();
+		action.clickAndHold(e1).moveToElement(e2).release(e1).perform();
+		driver.switchTo().defaultContent();
+		// TODO Auto-generated method stub
+
+	}
+
+}

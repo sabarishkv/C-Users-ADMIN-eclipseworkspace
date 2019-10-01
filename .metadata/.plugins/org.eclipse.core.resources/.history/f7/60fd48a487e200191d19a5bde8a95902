@@ -1,0 +1,25 @@
+package webdriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class promptalerts {
+
+	public static WebDriver driver;
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "F:\\software\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("file:///C:/Users/ADMIN/Desktop/alert.html");
+		driver.findElement(By.xpath("/html/body/fieldset/button")).click();
+		String str=driver.switchTo().alert().getText();
+		System.out.println(str);
+		driver.switchTo().alert().accept();
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
