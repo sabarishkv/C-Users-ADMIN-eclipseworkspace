@@ -1,8 +1,9 @@
-package webdriversameples;
+package webdriver;
 
-public class googltest {
+public class checkgit {
 
 	public static void main(String[] args) {
+		System.out.println("check git push")
 		// TODO Auto-generated method stub
 
 	}

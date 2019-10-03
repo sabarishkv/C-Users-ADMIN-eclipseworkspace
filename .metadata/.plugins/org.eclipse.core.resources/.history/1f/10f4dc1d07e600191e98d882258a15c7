@@ -1,6 +1,6 @@
-package Sampleprog;
+package webdriver;
 
-public class sumprogram {
+public class checkgit {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
